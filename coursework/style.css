@@ -1,6 +1,13 @@
 #board{
   width: 100%;
-  background-color: lightblue;
+}
+
+#board div{
+  border-radius: 10px;
+}
+
+#board div span{
+  border-radius: 5px;
 }
 
 span {
@@ -11,9 +18,15 @@ span {
   padding: 4px;
 }
 
+button{
+  border-radius: 4px;
+  border: 2px solid lightslategray;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 #todo {
   width: 30%;
-  background-color: white;
+  background-color: linen;
   border: black 1px solid;
   border-top: red 5px solid;
   float: left;
@@ -22,9 +35,19 @@ span {
   border-top-right-radius: 2px;
   margin: 0 10px;
 }
+
+#todo, #inprogress, #done{
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#todo span{
+  background-color: lightcoral;
+}
+
 #inprogress {
   width: 30%;
-  background-color: #ffffff;
+  background-color: linen;
   border: black 1px solid;
   border-top: green 5px solid;
   float: left;
@@ -33,9 +56,14 @@ span {
   border-top-right-radius: 2px;
   margin: 0 10px;
 }
+
+#inprogress span{
+  background-color: lightgreen;
+}
+
 #done {
   width: 30%;
-  background-color: white;
+  background-color: linen;
   border: black 1px solid;
   border-top: yellow 5px solid;
   float: left;
@@ -43,4 +71,35 @@ span {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   margin: 0 10px;
+}
+
+#done span{
+  background-color: lightyellow;
+}
+
+.blocks{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+#header_block{
+  margin-right: 30%;
+}
+
+#header_block div{
+  margin-right: 50%;
+  margin-bottom: 5px;
+}
+
+#header_block input{
+  border-radius: 4px;
+  background-color: linen;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#board{
+  background-color: #ffffff;
 }

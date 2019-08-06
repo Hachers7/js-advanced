@@ -8,15 +8,26 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div id="panel">
-    <input id="new_todo" placeholder="Enter new todo"/>
-    <button id="add_todo">Add</button>
-    <button id="load_todo">Load ToDo from server</button>
+  <div class="blocks" id="header_block">
+    <div id="new_todo_input" style="display: none">
+      <input id="new_todo" placeholder="Enter new todo"/>
+      <button id="add_todo">Add</button>
+    </div>
+    <div id="load_todo_block">
+      <button id="load_todo">Load tasks from server</button>
+    </div>
+    <div id="delete_block">
+      <input id="delete_field" placeholder="Drop task to delete"/>
+      <button id="delete_task">Delete task</button>
+    </div>
+    <div id="clear_board">
+      <button id="clear">Clear Board</button>
+    </div>
   </div>
-  <div id="board">
-    <div id="todo" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div id="done" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <div class="blocks" id="board">
+    <div id="todo" ondrop="drop(event)" ondragover="allowDrop(event)"><p>TODO</p></div>
+    <div id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)"><p>IN PROGRESS</p></div>
+    <div id="done" ondrop="drop(event)" ondragover="allowDrop(event)"><p>DONE</p></div>
   </div>
   <script src="draganddrop.js"></script>
   <script src="app.js"></script>
